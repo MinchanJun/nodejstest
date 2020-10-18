@@ -2,6 +2,13 @@ import { Request, Response, NextFunction } from "express";
 
 const parseController: any = {};
 
+/**
+ * 
+ * @param req 
+ * @param res 
+ * @param next 
+ * Middleware to parse api end point from /api/v1/parse
+ */
 parseController.v1Parse = (
     req: Request, 
     res: Response, 
@@ -34,6 +41,13 @@ parseController.v1Parse = (
     return next();
 }
 
+/**
+ * 
+ * @param req 
+ * @param res 
+ * @param next
+ * Middleware to parse api end point from /api/v2/parse
+ */
 parseController.v2Parse = (
     req: Request, 
     res: Response, 

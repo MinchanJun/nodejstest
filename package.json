@@ -4,7 +4,7 @@
   "description": "The application must expose restful endpoints that will parse data (passed in the request body) and return the value back to the client. The API will have two versions and depending on the version endpoint, the parsing of the data will return a different value back to the client. Use TypeScript interfaces so the code assumes the design / object properties.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --detectOpenHandles",
     "tsc": "tsc",
     "dev": "ts-node ./src/server/server.ts",
     "prod": "tsc && node ./build/server.js"
@@ -25,5 +25,32 @@
     "express": "^4.17.1",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "jest": "^26.5.3",
+    "supertest": "^5.0.0",
+    "ts-jest": "^26.4.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/__tests__/*.+(ts)"
+    ],
+    "testEnvironment": "node",
+    "globalSetup": "./jest-setup.js",
+    "globalTeardown": "./jest-teardown.js"
   }
 }

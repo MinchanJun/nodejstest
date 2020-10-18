@@ -3,7 +3,8 @@
     "sourceMap": true,
     "target": "es2017",
     "outDir": "./build",
-    "baseUrl": "src/server"
+    "baseUrl": "src/server",
+    "esModuleInterop": true
   },
   "include": [
     "src/server/**/*.ts"

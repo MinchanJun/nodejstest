@@ -1,4 +1,4 @@
-import * as express from 'express';
+import express from 'express';
 
 const parseController = require('../controller/parseController');
 const router = express.Router();

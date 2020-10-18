@@ -1,5 +1,5 @@
-import * as express from 'express';
-import * as bodyParser from 'body-parser';
+import express from 'express';
+import bodyParser from 'body-parser';
 
 const apiRouter = require('./routes/apiRouter');
 const app = express();
@@ -25,7 +25,5 @@ app.use(function (err, req, res, next) {
     let errorObj = Object.assign({}, defaultErr, err)
     res.status(errorObj.status).json(errorObj.message);
 })
-  
-app.listen(PORT);
 
-module.exports = app;
+module.exports = app.listen(PORT, () => console.log(`LISTENING AT PORT ${PORT}`));;
