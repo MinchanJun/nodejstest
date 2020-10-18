@@ -1,0 +1,29 @@
+{
+  "name": "nodejstest",
+  "version": "1.0.0",
+  "description": "The application must expose restful endpoints that will parse data (passed in the request body) and return the value back to the client. The API will have two versions and depending on the version endpoint, the parsing of the data will return a different value back to the client. Use TypeScript interfaces so the code assumes the design / object properties.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "dev": "ts-node ./src/server/server.ts",
+    "prod": "tsc && node ./build/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MinchanJun/nodejstest.git"
+  },
+  "author": "Minchan Jun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MinchanJun/nodejstest/issues"
+  },
+  "homepage": "https://github.com/MinchanJun/nodejstest#readme",
+  "dependencies": {
+    "@types/express": "^4.17.8",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  }
+}
